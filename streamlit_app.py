@@ -10,8 +10,10 @@ streamlit.text('🍌🥭 Build your own Shake🥝🍇')
 
 
 import pandas as pd
+
+my_fruit_list= pd.read_csv("https://uni-lab-files.s3.us-west-2.amazonaws.com/dabw/fruit_macros.txt")
 #allows the user to select from a provided list
 streamlit.multiselect("select a fruit from the list",list(my_fruit_list.index))
 
-my_fruit_list= pd.read_csv("https://uni-lab-files.s3.us-west-2.amazonaws.com/dabw/fruit_macros.txt")
+#display the dataframe
 streamlit.dataframe(my_fruit_list)
