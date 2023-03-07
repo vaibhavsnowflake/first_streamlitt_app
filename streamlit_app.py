@@ -14,7 +14,7 @@ import pandas as pd
 my_fruit_list= pd.read_csv("https://uni-lab-files.s3.us-west-2.amazonaws.com/dabw/fruit_macros.txt")
 my_fruit_list = my_fruit_list.set_index('Fruit')
 #allows the user to select from a provided list
-streamlit.multiselect("select a fruit from the list",list(my_fruit_list.index))
+streamlit.multiselect("select a fruit from the list",list(my_fruit_list.index),['Avacado','Strawberries'])
 
 #display the dataframe
 streamlit.dataframe(my_fruit_list)
